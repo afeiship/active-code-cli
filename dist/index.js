@@ -11,18 +11,16 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 exports.default = {
   renderNode: function renderNode(inProps, inEditor, inNext) {
     var children = inProps.children,
-        attributes = _objectWithoutProperties(inProps, ['children']);
+        node = inProps.node,
+        attributes = _objectWithoutProperties(inProps, ['children', 'node']);
 
-    var href = inProps.node.data.get('href');
-    var target = inProps.node.data.get('target') || '_blank';
-    switch (inProps.mark.type) {
+    var href = node.data.get('href');
+    var target = node.data.get('target') || '_blank';
+    switch (node.type) {
       case 'link':
         return React.createElement(
           'a',
-          _extends({ href: href,
-            target: target
-          }, attributes, {
-            className: 'slate-plugin-link-node' }),
+          _extends({ href: href, target: target }, attributes, { className: 'slate-plugin-link-node' }),
           children
         );
       default:
