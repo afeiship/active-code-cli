@@ -1,6 +1,6 @@
 export default {
   renderNode(inProps, inEditor, inNext) {
-    const { children, node, ...attributes } = inProps;
+    const { children, node, isFocused, isSelected, ...attributes } = inProps;
     const href = node.data.get('href');
     const target = node.data.get('target') || '_blank';
     switch (node.type) {

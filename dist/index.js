@@ -12,7 +12,9 @@ exports.default = {
   renderNode: function renderNode(inProps, inEditor, inNext) {
     var children = inProps.children,
         node = inProps.node,
-        attributes = _objectWithoutProperties(inProps, ['children', 'node']);
+        isFocused = inProps.isFocused,
+        isSelected = inProps.isSelected,
+        attributes = _objectWithoutProperties(inProps, ['children', 'node', 'isFocused', 'isSelected']);
 
     var href = node.data.get('href');
     var target = node.data.get('target') || '_blank';
