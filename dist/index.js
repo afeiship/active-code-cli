@@ -9,7 +9,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 exports.default = {
-  renderMark: function renderMark(inProps, inEditor, inNext) {
+  renderNode: function renderNode(inProps, inEditor, inNext) {
     var children = inProps.children,
         attributes = _objectWithoutProperties(inProps, ['children']);
 
@@ -19,7 +19,10 @@ exports.default = {
       case 'link':
         return React.createElement(
           'a',
-          _extends({ href: href, target: target }, attributes, { className: 'slate-plugin-link-node' }),
+          _extends({ href: href,
+            target: target
+          }, attributes, {
+            className: 'slate-plugin-link-node' }),
           children
         );
       default:
