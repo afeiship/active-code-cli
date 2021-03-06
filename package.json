@@ -1,6 +1,6 @@
 {
   "name": "@jswork/active-code-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get active code and copy it.",
   "homepage": "https://github.com/afeiship/active-code-cli",
   "author": {
