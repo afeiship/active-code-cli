@@ -15,7 +15,7 @@ npm install @jswork/active-code-cli
 
 ## usage
 ~~~
-Usage: active-code-cli [options]
+Usage: acc [options]
 
 Options:
   -V, --version  output the version number
