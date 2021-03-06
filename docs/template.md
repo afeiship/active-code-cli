@@ -15,12 +15,7 @@ npm install @jswork/active-code-cli
 
 ## usage
 ~~~
-Usage: active-code-cli [options]
-
-Options:
-  -V, --version  output the version number
-  -d, --debug    only show cmds, but not clean.
-  -h, --help     display help for command
+__USAGE__
 ~~~
 
 ## license
