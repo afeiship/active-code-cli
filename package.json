@@ -27,6 +27,7 @@
     "yargs": "^13.2.4"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
@@ -38,7 +39,8 @@
     "release-it": "^14.2.1"
   },
   "keywords": [
-    "boilerplate",
-    "cli"
+    "slate",
+    "plugin",
+    "link"
   ]
 }
