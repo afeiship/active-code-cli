@@ -11,10 +11,12 @@ const { version } = nx.absolutePackage();
 const program = new Command();
 const execSync = require('child_process').execSync;
 const TMP_DIR = '/tmp/idea-crack';
-const ZIP_DIR = 'http://soft-hub.cn/article/ll2d7f50fa62eb45f0171c5321f9fc926f.zip';
+const ZIP_DIR = `http://idea.medeming.com/jets/images/jihuoma.zip?tm=${Date.now()}`;
 
 program.version(version);
 program.parse(process.argv);
+
+console.log('zip dir:', ZIP_DIR);
 
 nx.declare({
   statics: {
