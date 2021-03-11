@@ -16,8 +16,6 @@ const ZIP_DIR = `http://idea.medeming.com/jets/images/jihuoma.zip?tm=${Date.now(
 program.version(version);
 program.parse(process.argv);
 
-console.log('zip dir:', ZIP_DIR);
-
 nx.declare({
   statics: {
     init() {
