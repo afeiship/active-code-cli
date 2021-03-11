@@ -17,12 +17,6 @@ npm install @jswork/active-code-cli
 ```shell
 # 7z
 brew install p7zip
-
-# check 7z installed
-7z -h
-
-# 7-Zip [64] 17.03 : Copyright (c) 1999-2020 Igor Pavlov : 2017-08-28
-# p7zip Version 17.03 (locale=utf8,Utf16=on,HugeFiles=on,64 bits,8 CPUs x64)
 ```
 
 ## usage

@@ -1,6 +1,6 @@
 {
   "name": "@jswork/active-code-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get active code and copy it.",
   "homepage": "https://github.com/afeiship/active-code-cli",
   "author": {
@@ -39,8 +39,10 @@
     "release-it": "^14.2.1"
   },
   "keywords": [
-    "slate",
-    "plugin",
-    "link"
+    "crack",
+    "code",
+    "cli",
+    "rubymime",
+    "idea"
   ]
 }
