@@ -7,6 +7,7 @@ require('@jswork/next');
 require('@jswork/next-absolute-package');
 require('@jswork/next-node-downfile');
 
+// http://idea.medeming.com/jets/
 const { version } = nx.absolutePackage();
 const program = new Command();
 const execSync = require('child_process').execSync;
