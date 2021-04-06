@@ -10,13 +10,13 @@
 
 ## installation
 ```shell
-npm install @jswork/active-code-cli
-```
-
-## dependencies
-```shell
-# 7z
+# 1. install deps(7z)
 brew install p7zip
+
+# 2. intall acc cmd to global
+git clone https://github.com/afeiship/active-code-cli.git
+cd active-code-cli
+npm link
 ```
 
 ## usage
