@@ -33,7 +33,7 @@ nx.declare({
           [
             `cd ${TMP_DIR}/`,
             '7z e active-code.zip',
-            "cat '2018.2之后的版本用这个.txt' | pbcopy"
+            "cat '(通用激活码)2018.2之后的版本用这个.txt' | pbcopy"
           ].join('&&')
         );
         console.log(chalk.green('😎 Copyed!'));
