@@ -12,7 +12,11 @@ const { version } = nx.absolutePackage();
 const program = new Command();
 const execSync = require('child_process').execSync;
 const TMP_DIR = '/tmp/idea-crack';
-const ZIP_DIR = `http://idea.medeming.com/jets/images/jihuoma.zip?tm=${Date.now()}`;
+// backup urls:
+// http://ajihuo.com/a/jihuoma.zip
+// http://idea.medeming.com/a/jihuoma.zip
+// http://idea.medeming.com/jets/images/jihuoma.zip
+const ZIP_DIR = `http://idea.medeming.com/a/jihuoma.zip?ts=${Date.now()}`;
 
 program.version(version);
 program.parse(process.argv);
