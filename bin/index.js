@@ -16,7 +16,8 @@ const TMP_DIR = '/tmp/idea-crack';
 // http://ajihuo.com/a/jihuoma.zip
 // http://idea.medeming.com/a/jihuoma.zip
 // http://idea.medeming.com/jets/images/jihuoma.zip
-const ZIP_DIR = `http://idea.medeming.com/a/jihuoma.zip?ts=${Date.now()}`;
+// http://idea.medeming.com/a/jihuoma1.zip
+const ZIP_DIR = `http://idea.medeming.com/a/jihuoma1.zip?ts=${Date.now()}`;
 
 program.version(version);
 program.parse(process.argv);
@@ -37,7 +38,7 @@ nx.declare({
           [
             `cd ${TMP_DIR}/`,
             '7z e active-code.zip',
-            "cat '(通用激活码)2018.2之后的版本用这个.txt' | pbcopy"
+            "cat '2018.2之后的版本用这个.txt' | pbcopy"
           ].join('&&')
         );
         console.log(chalk.green('😎 Copyed!'));
