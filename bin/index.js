@@ -37,11 +37,7 @@ nx.declare({
       execSync([`rm -rf ${TMP_DIR}`, `mkdir -p ${TMP_DIR}`].join('&&'));
       nx.nodeDownfile({ url: ZIP_DIR, filename: `${TMP_DIR}/active-code.zip` }).then(() => {
         execSync(
-          [
-            `cd ${TMP_DIR}/`,
-            '7z e active-code.zip',
-            "cat '2018.2之后的版本用这个.txt' | pbcopy"
-          ].join('&&')
+          [`cd ${TMP_DIR}/`, '7z e active-code.zip', "cat '1年激活码.txt' | pbcopy"].join('&&')
         );
         console.log(chalk.green('😎 Copyed!'));
       });
