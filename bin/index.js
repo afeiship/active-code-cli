@@ -40,7 +40,7 @@ nx.declare({
           [
             `cd ${TMP_DIR}/`,
             '7z e active-code.zip',
-            "cat '2018.1月之前用这个--.txt' | pbcopy"
+            "cat '7HL2TLHB61 - for 2018.1 or earlier' | pbcopy"
           ].join('&&')
         );
         console.log(chalk.green('😎 Copyed!'));
