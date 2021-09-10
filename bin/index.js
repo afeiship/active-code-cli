@@ -37,11 +37,7 @@ nx.declare({
       execSync([`rm -rf ${TMP_DIR}`, `mkdir -p ${TMP_DIR}`].join('&&'));
       nx.nodeDownfile({ url: ZIP_DIR, filename: `${TMP_DIR}/active-code.zip` }).then(() => {
         execSync(
-          [
-            `cd ${TMP_DIR}/`,
-            '7z e active-code.zip',
-            "cat '7HL2TLHB61 - for 2018.1 or earlier.txt' | pbcopy"
-          ].join('&&')
+          [`cd ${TMP_DIR}/`, '7z e active-code.zip', "cat 'cat *late*.txt' | pbcopy"].join('&&')
         );
         console.log(chalk.green('😎 Copyed!'));
       });
