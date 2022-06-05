@@ -1,6 +1,6 @@
 {
   "name": "@jswork/active-code-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Get active code and copy it.",
   "homepage": "https://js.work",
   "author": {
@@ -41,8 +41,12 @@
     "release-it": "^14.14.3"
   },
   "keywords": [
-    "boilerplate",
-    "cli"
+    "crack",
+    "code",
+    "cli",
+    "rubymime",
+    "idea",
+    "acc"
   ],
   "repository": {
     "type": "git",
