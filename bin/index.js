@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const fetch = require('node-fetch');
 const inquirer = require('inquirer');
 const clipboardy = require('clipboardy');
+const nfh = require('@jswork/node-fetch-html');
 
 // next packages:
 require('@jswork/next');
@@ -33,11 +34,10 @@ const App = nx.declare({
   methods: {
     async get(inTarget) {
       const secret = SECRETS[inTarget];
-      const html = await fetch(secret[0], {
+      const $ = await nfh(secret[0], {
         ...DEFAULT_OPTS,
         body: `secret_key=${secret[1]}`
-      }).then((res) => res.text());
-      const $ = cheerio.load(html);
+      });
       const text = $('.secret-password blockquote').eq(1).text();
       clipboardy.writeSync(text);
     },

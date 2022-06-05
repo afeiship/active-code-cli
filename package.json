@@ -21,6 +21,7 @@
     "@jswork/next": "^1.0.5",
     "@jswork/next-absolute-package": "^1.0.1",
     "@jswork/next-get-key": "^1.0.0",
+    "@jswork/node-fetch-html": "^1.0.2",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.11",
     "clipboardy": "^2.3.0",
