@@ -14,7 +14,7 @@ require('@jswork/next-absolute-package');
 const { version } = nx.absolutePackage();
 const program = new Command();
 
-const secrets = {
+const SECRETS = {
   idea: ['https://idea.medeming.com/jetbrains/1119.html', 220529],
   pycharm: ['https://idea.medeming.com/pycharm/1045.html', 550529]
 };
@@ -32,7 +32,7 @@ program.parse(process.argv);
 const App = nx.declare({
   methods: {
     async get(inTarget) {
-      const secret = secrets[inTarget];
+      const secret = SECRETS[inTarget];
       const html = await fetch(secret[0], {
         ...DEFAULT_OPTS,
         body: `secret_key=${secret[1]}`
