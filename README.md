@@ -6,26 +6,28 @@
 [![size][size-image]][size-url]
 [![download][download-image]][download-url]
 
-![snapshot](https://tva1.sinaimg.cn/large/008eGmZEgy1goaa40g6e1j30m003y3yl.jpg)
+![snapshot](https://tva1.sinaimg.cn/large/0081Kckwgy1gk87ynhkbaj30u60asasp.jpg)
 
 ## installation
 ```shell
-# 1. install deps(7z)
-brew install p7zip
+# public
+npm i -g @jswork/active-code-cli
 
-# 2. intall acc cmd to global
+# private
 git clone https://github.com/afeiship/active-code-cli.git
 cd active-code-cli
-npm link
+npm i && npm link
 ```
 
 ## usage
 ~~~
-Usage: acc [options]
+Usage: active-code-cli [options]
 
 Options:
-  -V, --version  output the version number
-  -h, --help     display help for command
+  -V, --version       output the version number
+  -d, --debug         only show cmds, but not clean.
+  -s, --src <string>  source filepath. (default: "./src")
+  -h, --help          display help for command
 ~~~
 
 ## license

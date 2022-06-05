@@ -1,44 +1,63 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
 const chalk = require('chalk');
+const cheerio = require('cheerio');
+const fetch = require('node-fetch');
+const inquirer = require('inquirer');
+const clipboardy = require('clipboardy');
 
 // next packages:
 require('@jswork/next');
 require('@jswork/next-absolute-package');
-require('@jswork/next-node-downfile');
 
 // http://idea.medeming.com/jets/
 const { version } = nx.absolutePackage();
 const program = new Command();
-const execSync = require('child_process').execSync;
-const TMP_DIR = '/tmp/idea-crack';
-// backup urls:
-// http://ajihuo.com/a/jihuoma.zip
-// http://idea.medeming.com/a/jihuoma.zip
-// http://idea.medeming.com/jets/images/jihuoma.zip
 
-// 原始地址: http://idea.medeming.com/idea/
-// http://idea.medeming.com/a/jihuoma1.zip
-const ZIP_DIR = `http://idea.medeming.com/a/jihuoma1.zip?ts=${Date.now()}`;
+const secrets = {
+  idea: ['https://idea.medeming.com/jetbrains/1119.html', 220529],
+  pycharm: ['https://idea.medeming.com/pycharm/1045.html', 550529]
+};
+
+const DEFAULT_OPTS = {
+  method: 'post',
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded'
+  }
+};
 
 program.version(version);
 program.parse(process.argv);
 
-nx.declare({
-  statics: {
-    init() {
-      const app = new this();
-      app.start();
-    }
-  },
+const App = nx.declare({
   methods: {
-    init() {},
-    start() {
-      execSync([`rm -rf ${TMP_DIR}`, `mkdir -p ${TMP_DIR}`].join('&&'));
-      nx.nodeDownfile({ url: ZIP_DIR, filename: `${TMP_DIR}/active-code.zip` }).then(() => {
-        execSync([`cd ${TMP_DIR}/`, '7z e active-code.zip', 'cat *late*.txt | pbcopy'].join('&&'));
-        console.log(chalk.green('😎 Copyed!'));
-      });
+    async get(inTarget) {
+      const secret = secrets[inTarget];
+      const html = await fetch(secret[0], {
+        ...DEFAULT_OPTS,
+        body: `secret_key=${secret[1]}`
+      }).then((res) => res.text());
+      const $ = cheerio.load(html);
+      const text = $('.secret-password blockquote').eq(1).text();
+      clipboardy.writeSync(text);
+    },
+    async start() {
+      const res = await inquirer.prompt([
+        {
+          name: 'type',
+          type: 'list',
+          message: 'Select your IDE',
+          choices: [{ value: 'idea' }, { value: 'pycharm' }]
+        }
+      ]);
+
+      await this.get(res.type);
+      console.log(chalk.green('😎 Copyed!'));
     }
   }
 });
+
+(async () => {
+  const app = new App();
+  await app.start();
+})();

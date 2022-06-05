@@ -6,17 +6,17 @@
 [![size][size-image]][size-url]
 [![download][download-image]][download-url]
 
-![snapshot](https://tva1.sinaimg.cn/large/008eGmZEgy1goaa40g6e1j30m003y3yl.jpg)
+![snapshot](https://tva1.sinaimg.cn/large/0081Kckwgy1gk87ynhkbaj30u60asasp.jpg)
 
 ## installation
 ```shell
-npm install @jswork/active-code-cli
-```
+# public
+npm i -g @jswork/active-code-cli
 
-## dependencies
-```shell
-# 7z
-brew install p7zip
+# private
+git clone https://github.com/afeiship/active-code-cli.git
+cd active-code-cli
+npm i && npm link
 ```
 
 ## usage
