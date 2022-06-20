@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
 const chalk = require('chalk');
-const cheerio = require('cheerio');
-const fetch = require('node-fetch');
 const inquirer = require('inquirer');
 const clipboardy = require('clipboardy');
 const nfh = require('@jswork/node-fetch-html');
@@ -17,7 +15,7 @@ const program = new Command();
 
 const SECRETS = {
   idea: ['https://idea.medeming.com/jetbrains/1119.html', 220529],
-  pycharm: ['https://idea.medeming.com/pycharm/1045.html', 550615]
+  pycharm: ['https://idea.medeming.com/pycharm/1045.html', 550620]
 };
 
 const DEFAULT_OPTS = {
