@@ -1,6 +1,6 @@
 {
   "name": "@jswork/active-code-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Get active code and copy it.",
   "homepage": "https://js.work",
   "author": {
@@ -45,7 +45,9 @@
     "cli",
     "rubymime",
     "idea",
-    "acc"
+    "acc",
+    "pyc",
+    "pycharm"
   ],
   "repository": {
     "type": "git",
