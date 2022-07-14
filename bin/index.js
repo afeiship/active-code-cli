@@ -15,7 +15,7 @@ const program = new Command();
 
 const SECRETS = {
   idea: ['https://idea.medeming.com/jetbrains/1119.html', 220529],
-  pycharm: ['https://idea.medeming.com/pycharm/1045.html', 550620]
+  pycharm: ['https://www.ajihuo.com/pycharm/4197.html', 550702]
 };
 
 const DEFAULT_OPTS = {
