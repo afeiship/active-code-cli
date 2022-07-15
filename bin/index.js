@@ -4,6 +4,10 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const clipboardy = require('clipboardy');
 const nfh = require('@jswork/node-fetch-html');
+const updateNotifier = require('update-notifier');
+const pkg = require('../package.json');
+
+updateNotifier({ pkg }).notify();
 
 // next packages:
 require('@jswork/next');
