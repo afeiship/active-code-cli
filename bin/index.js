@@ -3,6 +3,7 @@ const { Command } = require('commander');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const clipboardy = require('clipboardy');
+const fetch = require('node-fetch');
 const nfh = require('@jswork/node-fetch-html');
 const updateNotifier = require('update-notifier');
 const pkg = require('../package.json');
@@ -18,8 +19,12 @@ const { version } = nx.absolutePackage();
 const program = new Command();
 
 const SECRETS = {
-  idea: ['https://idea.medeming.com/jetbrains/1119.html', 220529],
-  pycharm: ['https://www.ajihuo.com/pycharm/4197.html', 550720]
+  'idea': ['https://idea.medeming.com/jetbrains/1119.html', 220529],
+  'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550720],
+  '52shizhan:goland': ['goland', 4300],
+  '52shizhan:pycharm': ['pycharm', 4421],
+  '52shizhan:webstorm': ['webstorm', 2588],
+  '52shizhan:idea': ['webstorm', 2588]
 };
 
 const DEFAULT_OPTS = {
@@ -43,17 +48,27 @@ const App = nx.declare({
       const text = $('.secret-password blockquote').eq(1).text();
       clipboardy.writeSync(text);
     },
+
+    async getSz(inTarget) {
+      const secret = SECRETS[inTarget];
+      const res = await fetch('http://web.52shizhan.cn/ide/getCode', {
+        ...DEFAULT_OPTS,
+        body: `code=${secret[1]}&read_count=&flag_title=${secret[0]}`
+      }).then((r) => r.json());
+      clipboardy.writeSync(res.data.ac_code);
+    },
+
     async start() {
       const res = await inquirer.prompt([
         {
           name: 'type',
           type: 'list',
           message: 'Select your IDE',
-          choices: [{ value: 'idea' }, { value: 'pycharm' }]
+          choices: Object.keys(SECRETS)
         }
       ]);
-
-      await this.get(res.type);
+      const method = res.type.includes('52shizhan:') ? 'getSz' : 'get';
+      await this[method](res.type);
       console.log(chalk.green('😎 Copyed!'));
     }
   }
