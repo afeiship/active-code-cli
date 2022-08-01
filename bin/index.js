@@ -18,6 +18,10 @@ require('@jswork/next-absolute-package');
 const { version } = nx.absolutePackage();
 const program = new Command();
 
+/**
+ * pycharm: Python 面试官
+ */
+
 const SECRETS = {
   'idea': ['https://idea.medeming.com/jetbrains/1119.html', 220529],
   'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550729],
