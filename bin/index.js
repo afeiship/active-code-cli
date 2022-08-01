@@ -20,7 +20,7 @@ const program = new Command();
 
 const SECRETS = {
   'idea': ['https://idea.medeming.com/jetbrains/1119.html', 220529],
-  'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550720],
+  'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550729],
   '52shizhan:goland': ['goland', 4300],
   '52shizhan:pycharm': ['pycharm', 4421],
   '52shizhan:webstorm': ['webstorm', 2588],
