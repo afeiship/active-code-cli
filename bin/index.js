@@ -29,7 +29,7 @@ const program = new Command();
 const SECRETS = {
   'idea': ['https://www.ajihuo.com/idea/4222.html', 880805],
   'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550809],
-  'webstorm': ['https://www.ajihuo.com/webstorm/4188.html', 180729],
+  'webstorm': ['https://www.ajihuo.com/webstorm/4188.html', 180809],
   '52shizhan:goland': ['goland', 4300],
   '52shizhan:pycharm': ['pycharm', 4421],
   '52shizhan:webstorm': ['webstorm', 2588],
