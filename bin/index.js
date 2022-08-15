@@ -54,7 +54,7 @@ const App = nx.declare({
         ...DEFAULT_OPTS,
         body: `secret_key=${secret[1]}`
       });
-      const text = $('.secret-password blockquote').eq(1).text();
+      const text = $('.secret-password blockquote').eq(0).text();
       clipboardy.writeSync(text);
     },
 
