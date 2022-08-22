@@ -20,8 +20,7 @@ const program = new Command();
 
 /**
  * pycharm: Python 面试官
- * https://js.work/posts/a9701e51a674a
- *
+ * webstorm: 前端领地
  * idea: 架构鱼
  * https://js.work/posts/a9701e51a674a
  */
