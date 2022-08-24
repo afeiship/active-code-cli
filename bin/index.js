@@ -23,13 +23,15 @@ const program = new Command();
  * webstorm: 前端领地
  * idea: 架构鱼
  * https://js.work/posts/a9701e51a674a
+ *
+ * 52shizhan:goland: Go语言圈/验证码
  */
 
 const SECRETS = {
   'idea': ['https://www.ajihuo.com/idea/4222.html', 550822, 1],
   'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550822, 1],
   'webstorm': ['https://www.ajihuo.com/webstorm/4188.html', 180822, 0],
-  '52shizhan:goland': ['goland', 4300],
+  '52shizhan:goland': ['goland', 2209],
   '52shizhan:pycharm': ['pycharm', 4421],
   '52shizhan:webstorm': ['webstorm', 2588],
   '52shizhan:idea': ['webstorm', 2588]
