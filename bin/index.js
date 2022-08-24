@@ -79,7 +79,7 @@ const App = nx.declare({
       ]);
       const method = res.type.includes('52shizhan:') ? 'getSz' : 'get';
       await this[method](res.type);
-      console.log(chalk.green('😎 Copyed!'));
+      console.log(chalk.green('😎 Copyed'));
     }
   }
 });
