@@ -28,8 +28,8 @@ const program = new Command();
  */
 
 const SECRETS = {
-  'idea': ['https://www.ajihuo.com/idea/4222.html', 550822, 1],
-  'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550822, 1],
+  'idea': ['https://www.ajihuo.com/idea/4222.html', 550825, 1],
+  'pycharm': ['https://www.ajihuo.com/pycharm/4197.html', 550825, 1],
   'webstorm': ['https://www.ajihuo.com/webstorm/4188.html', 180822, 0],
   '52shizhan:goland': ['goland', 2209],
   '52shizhan:pycharm': ['pycharm', 4421],
